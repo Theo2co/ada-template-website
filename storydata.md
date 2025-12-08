@@ -7,7 +7,7 @@ hero_subtitle: A data story on alliances, rivalries and fragile friendships on R
 
 # Introduction {#intro}
 
-Imagine Reddit as a giant city. Test 2
+Imagine Reddit as a giant city.
 
 Each subreddit is a neighbourhood with its own culture, memes and unwritten rules.  
 Most of the time, these neighbourhoods mind their own business. But sometimes they look over the fence: they praise another community, mock it, or directly attack it.
