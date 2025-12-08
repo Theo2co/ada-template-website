@@ -17,7 +17,7 @@ hero_subtitle: A data story on alliances, rivalries and fragile friendships
 
 ...
 
-# III/ Co-attack analysis {#results}
+# III/ Enemy of my enemy {#results}
 
 ...
 
