@@ -34,64 +34,118 @@ body {
 
 .hero {
   position: relative;
-  min-height: 45vh;
+  min-height: 100vh;          /* FULL SCREEN */
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  padding: 3rem 1.5rem;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+/* overlay peut rester comme avant, éventuellement un peu assombri */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(0,0,0,0.30), rgba(0,0,0,0.65));
+    linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.75));
 }
 
-
-.hero-content {
+.hero-inner {
   position: relative;
-  max-width: 760px;
-  text-align: center;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;   /* nav en haut, titre au centre */
+  height: 100%;
+}
+
+/* NAV BAR IN HERO */
+.hero-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.hero-logo {
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+}
+
+/* the nav#toc that toc.js fills */
+.hero-nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.75rem;
+}
+
+.hero-nav-links li {
+  margin: 0;
+}
+
+.hero-nav-links a {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+}
+
+.hero-nav-links a:hover,
+.hero-nav-links a.is-active {
+  color: #ffffff;
+  border-bottom-color: rgba(255,255,255,0.9);
+}
+
+/* centered title block */
+.hero-content {
+  max-width: 720px;
+  margin: 0 auto;
   padding: 2.5rem 2rem;
-  background: rgba(6, 9, 20, 0.86);
+  background: rgba(6, 9, 20, 0.78);
   border-radius: 24px;
-  border: 1px solid rgba(255,255,255,0.12);
-  backdrop-filter: blur(14px);
-  box-shadow:
-    0 24px 60px rgba(0, 0, 0, 0.75),
-    0 0 0 1px rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.16);
+  backdrop-filter: blur(12px);
+  text-align: center;
 }
 
 .hero-content h1 {
   margin: 0 0 0.75rem;
-  font-size: clamp(2.1rem, 3vw, 2.7rem);
-  letter-spacing: 0.03em;
+  font-size: clamp(2.3rem, 4vw, 3rem);
+  color: #ffffff;
 }
 
 .hero-subtitle {
   margin: 0;
-  font-size: 0.98rem;
-  color: var(--text-muted);
+  font-size: 1rem;
+  color: rgba(229,231,235,0.9);
 }
+
 
 /* --------- LAYOUT GLOBAL --------- */
 
 .page-shell {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, var(--sidebar-width));
-  gap: 2rem;
-  max-width: calc(var(--max-width) + var(--sidebar-width) + 4rem);
-  margin: 2.5rem auto 3.5rem;
+  max-width: var(--max-width);
+  margin: 3rem auto 3.5rem;
   padding: 0 1.5rem;
 }
 
 .page-main {
   min-width: 0;
 }
+
 
 .page-content {
   background: var(--bg-elevated);
