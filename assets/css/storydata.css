@@ -50,9 +50,18 @@ body {
   padding: 1.5rem 2rem 3.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding-top: 5rem; /* décalage sous la nav fixe */
 }
+
+/* Layout principal du hero : gauche = texte, droite = personnages */
+.hero-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
 
 /* ---------- NAVBAR ---------- */
 
@@ -124,11 +133,26 @@ body {
 /* ---------- TITRE STYLE BIG BANG THEORY ---------- */
 
 .hero-content {
-  margin: 0 auto;
-  margin-top: 7rem;   /* au lieu de 6rem si tu veux */
+  max-width: 520px;
   text-align: left;
+  margin: 0;
 }
 
+/* Illustration des personnages à droite */
+.hero-characters {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-characters img {
+  display: block;
+  max-height: 320px;  /* joue avec cette valeur pour ajuster la taille */
+  width: auto;
+  /* optionnel: un petit drop shadow pour bien détacher sur le fond orange */
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.35));
+}
 
 .hero-bbt-logo {
   text-transform: uppercase;
