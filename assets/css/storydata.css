@@ -427,5 +427,87 @@ body {
 }
 */
 
+/* ---------- CHAT STYLE (WHATSAPP-LIKE) ---------- */
+
+.chat-thread {
+  margin: 2.5rem 0 3rem;
+  padding: 1.5rem 1.8rem;
+  border-radius: 18px;
+  background: #f5f5f5;
+}
+
+.chat-msg {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1.1rem;
+}
+
+/* Left vs right alignment */
+.chat-msg-left {
+  flex-direction: row;
+}
+
+.chat-msg-right {
+  flex-direction: row-reverse;
+}
+
+/* Avatar */
+.chat-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #111;
+  flex-shrink: 0;
+}
+
+.chat-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bubble */
+.chat-bubble {
+  max-width: 70%;
+  padding: 0.65rem 0.95rem 0.75rem;
+  border-radius: 18px;
+  margin: 0 0.7rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Left bubbles = white, right bubbles = dark (WhatsApp style) */
+.chat-msg-left .chat-bubble {
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+}
+
+.chat-msg-right .chat-bubble {
+  background: #111111;
+  color: #ffffff;
+}
+
+/* Name line inside bubble */
+.chat-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  opacity: 0.7;
+}
+
+/* Tiny color accent per character (optional) */
+.chat-leonard .chat-name { color: #111111; }
+.chat-sheldon .chat-name { color: #f97316; }
+.chat-raj .chat-name     { color: #f97316; }
+.chat-penny .chat-name   { color: #f97316; }
+
+/* Remove extra margins from paragraphs inside bubbles */
+.chat-bubble p {
+  margin: 0;
+}
+
 
 /*Test 2*/
