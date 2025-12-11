@@ -1,29 +1,16 @@
-/* ---------- Palette Big Bang Theory ---------- */
+/* ---------- PALETTE MINIMALE (BLANC / ORANGE / NOIR) ---------- */
 :root {
-  /* Couleurs inspirées de l'affiche : orange, rouge, crème, noir */
-  --bbt-orange-light: #f97316;
-  --bbt-orange: #ea580c;
-  --bbt-red: #b91c1c;
-  --bbt-cream: #fef3c7;
-  --bbt-dark: #111827;
+  --orange-light: #fbbf77;
+  --orange: #f97316;
+  --orange-dark: #ea580c;
 
-  /* ajout pour le texte / accents */
-  --bbt-yellow: #fde68a;
-  --bbt-blue: #38bdf8;
+  --black: #111111;
+  --white: #ffffff;
 
-  --bg: #0b1120;
-  --bg-elevated: #020617;
-  --accent: var(--bbt-red);
-  --accent-soft: rgba(185, 28, 28, 0.14);
-  --text: #f9fafb;
-  --text-muted: #e5e7eb;
-  --border-soft: #1f2937;
   --max-width: 960px;
-  --radius-xl: 18px;
 }
 
-
-/* ---------- Reset léger ---------- */
+/* ---------- RESET LÉGER ---------- */
 *,
 *::before,
 *::after {
@@ -34,22 +21,21 @@ body {
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  /* Dégradé de fond façon affiche Big Bang Theory */
-  background:
-    radial-gradient(circle at top, #fed7aa 0, #f97316 25%, #ea580c 55%, #7f1d1d 80%, #020617 100%);
-  color: var(--text);
+  background: var(--white);
+  color: var(--black);
   line-height: 1.6;
 }
 
-
-/* ---------- HERO PLEIN ÉCRAN ---------- */
+/* ---------- HERO ---------- */
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   align-items: stretch;
   justify-content: center;
+  background: linear-gradient(to bottom, var(--orange), var(--orange-dark));
+  color: var(--white);
 }
 
 .hero-inner {
@@ -65,8 +51,7 @@ body {
   padding-top: 5rem; /* décalage sous la nav fixe */
 }
 
-
-/* ---------- Barre de nav façon générique ---------- */
+/* ---------- NAVBAR ---------- */
 
 .hero-nav {
   position: fixed;
@@ -80,12 +65,12 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 50;
-  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.85));
-  border-bottom: 1px solid rgba(15, 23, 42, 0.9);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+  background: var(--black);
+  color: var(--white);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
-/* Logo ADAnalysts 4A façon badge série */
+/* Logo ADAnalysts 4A façon badge sobre */
 .hero-logo {
   display: flex;
   align-items: baseline;
@@ -94,22 +79,21 @@ body {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-size: 0.8rem;
-  color: var(--bbt-yellow);
 }
 
 .hero-logo-main {
   padding: 0.15rem 0.6rem;
   border-radius: 999px;
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid rgba(248, 250, 252, 0.1);
+  background: var(--white);
+  color: var(--black);
 }
 
 .hero-logo-sub {
-  font-size: 0.75rem;
-  color: var(--bbt-blue);
+  font-size: 0.8rem;
+  color: var(--orange-light);
 }
 
-/* Nav horizontale façon onglets */
+/* Liens de nav */
 .hero-nav-links {
   display: flex;
   gap: 1.5rem;
@@ -120,127 +104,75 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: rgba(248, 250, 252, 0.85);
+  color: var(--white);
   text-decoration: none;
-  padding: 0.45rem 0.9rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 999px;
-  border: 1px solid transparent;
-  background: transparent;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  transition: background 0.18s ease, color 0.18s ease;
 }
 
 .hero-nav-links a:hover {
-  background: rgba(15, 23, 42, 0.8);
-  border-color: rgba(248, 250, 252, 0.35);
-  transform: translateY(-1px);
-  cursor: pointer;
+  background: var(--orange);
+  color: var(--black);
 }
 
-.hero-nav-links a.is-active {
-  background: rgba(248, 250, 252, 0.95);
-  border-color: rgba(15, 23, 42, 0.9);
-  color: #111827;
-}
-
-
-/* ---------- Titre façon affiche Big Bang Theory ---------- */
+/* ---------- TITRE STYLE BIG BANG THEORY ---------- */
 
 .hero-content {
   margin: 0 auto;
-  margin-top: 6.5rem;
-  text-align: center;
+  margin-top: 6rem;
+  text-align: left;
 }
 
-.hero-bbt-wrapper {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.2rem;
-}
-
-/* petit pseudo-logo atomique */
-.hero-bbt-atom {
-  position: relative;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 3px solid #111827;
-  box-shadow: 0 0 0 4px rgba(254, 243, 199, 0.9);
-  background: radial-gradient(circle at 30% 25%, #fefce8 0, #fed7aa 35%, transparent 70%);
-}
-
-.hero-bbt-atom::before,
-.hero-bbt-atom::after {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  border-radius: 50%;
-  border: 2px solid #111827;
-}
-
-.hero-bbt-atom::before {
-  transform: rotate(35deg);
-}
-
-.hero-bbt-atom::after {
-  transform: rotate(-35deg);
-}
-
-/* bloc logo principal */
 .hero-bbt-logo {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--black);
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
 }
 
+/* "the" */
 .hero-bbt-the {
   font-size: 0.8rem;
   font-weight: 800;
-  color: #111827;
-  margin-left: 0.25rem;
+  color: var(--black);
 }
 
-.hero-bbt-block {
-  padding: 0.35rem 1.8rem;
-  font-size: clamp(1.9rem, 4vw, 2.8rem);
+/* Mot noir comme "BIG" */
+.hero-bbt-big {
+  font-size: clamp(2.6rem, 5vw, 3.4rem);
   font-weight: 900;
-  box-shadow:
-    0 4px 0 rgba(15, 23, 42, 0.85),
-    0 16px 35px rgba(0, 0, 0, 0.5);
+  color: var(--black);
 }
 
-.hero-bbt-block-red {
-  background: #dc2626;
-  color: #fef9c3;
+/* Bloc blanc sur fond noir/orange comme "BANG" */
+.hero-bbt-bang {
+  font-size: clamp(2.6rem, 4.8vw, 3.2rem);
+  font-weight: 900;
+  padding: 0.15rem 0.6rem;
+  background: var(--black);
+  color: var(--white);
 }
 
-.hero-bbt-block-black {
-  background: #111827;
-  color: #fef9c3;
-}
-
+/* Ligne "theory" en dessous */
 .hero-bbt-theory {
   font-size: 1.1rem;
   font-weight: 900;
-  color: #111827;
-  text-transform: uppercase;
-  letter-spacing: 0.24em;
-  margin-left: 0.25rem;
+  color: var(--black);
 }
 
 /* Sous-titre */
 .hero-subtitle {
-  margin: 1.8rem 0 0;
+  margin: 2rem 0 0;
   font-size: 1rem;
-  color: rgba(249, 250, 251, 0.95);
+  color: var(--white);
+  max-width: 520px;
 }
 
-
-/* ---------- CONTENU PRINCIPAL ---------- */
+/* ---------- CONTENU PRINCIPAL : PAGE BLANCHE ÉPURÉE ---------- */
 
 .page-shell {
   max-width: var(--max-width);
@@ -252,14 +184,13 @@ body {
   min-width: 0;
 }
 
+/* Plus de box sombre : juste le texte sur fond blanc */
 .page-content {
-  background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), #020617 80%);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--border-soft);
-  padding: 2.25rem 2.1rem;
-  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.75);
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
 }
-
 
 /* ---------- TYPO ---------- */
 
@@ -269,21 +200,19 @@ body {
   font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 0.6rem;
+  color: var(--black);
 }
 
 .page-content h1 {
-  font-size: 1.7rem;
-  color: var(--bbt-yellow);
+  font-size: 1.9rem;
 }
 
 .page-content h2 {
-  font-size: 1.35rem;
-  color: #e5e7eb;
+  font-size: 1.5rem;
 }
 
 .page-content h3 {
-  font-size: 1.12rem;
-  color: #f9fafb;
+  font-size: 1.2rem;
 }
 
 .page-content p {
@@ -292,36 +221,33 @@ body {
 }
 
 .page-content em {
-  color: var(--bbt-blue);
+  font-style: italic;
 }
 
 .page-content a {
-  color: var(--bbt-yellow);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(250, 250, 210, 0.4);
+  color: var(--orange-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 .page-content a:hover {
-  border-bottom-color: rgba(250, 250, 210, 0.9);
+  text-decoration-thickness: 2px;
 }
 
+/* Blockquotes simples */
 .page-content blockquote {
   margin: 1.2rem 0;
-  padding: 0.9rem 1.2rem;
-  border-left: 3px solid var(--bbt-blue);
-  background: rgba(15, 23, 42, 0.8);
-  border-radius: 0 12px 12px 0;
-  color: var(--text-muted);
+  padding: 0.6rem 1rem;
+  border-left: 3px solid var(--orange);
+  background: #fff7ed;
 }
 
+/* Code inline simple */
 .page-content code {
-  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  background: rgba(15, 23, 42, 0.9);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: #f5f5f5;
   padding: 0.05rem 0.35rem;
-  border-radius: 0.25rem;
-  border: 1px solid rgba(31, 41, 55, 0.9);
 }
-
 
 /* ---------- FOOTER ---------- */
 
@@ -330,14 +256,13 @@ body {
   margin: 0 auto 2.5rem;
   padding: 0 1.5rem;
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: #666666;
   text-align: center;
 }
 
 .page-footer .mute {
   opacity: 0.7;
 }
-
 
 /* ---------- RESPONSIVE ---------- */
 
@@ -373,20 +298,7 @@ body {
     gap: 0.6rem;
   }
 
-  .page-content {
-    padding: 1.6rem 1.25rem;
-  }
-
-  .hero-bbt-wrapper {
-    flex-direction: column;
-  }
-
-  .hero-bbt-logo {
-    align-items: center;
-  }
-
-  .hero-bbt-theory {
-    text-align: center;
-    margin-left: 0;
+  .hero-content {
+    margin-top: 5rem;
   }
 }
