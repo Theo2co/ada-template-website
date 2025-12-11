@@ -59,11 +59,12 @@ body {
 .hero-nav {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 1200px;
+  left: 0;           /* au lieu de left: 50% */
+  right: 0;          /* prend 100% de la largeur */
+  transform: none;   /* plus de translateX */
   width: 100%;
-  padding: 0.85rem 2rem;
+  max-width: none;   /* on enlève la limite 1200px */
+  padding: 0.85rem 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,6 +73,7 @@ body {
   color: var(--white);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
+
 
 /* Logo ADAnalysts 4A façon badge sobre */
 .hero-logo {
