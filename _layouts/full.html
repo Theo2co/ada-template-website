@@ -25,7 +25,7 @@
     <!-- HERO ORANGE STYLE BIG BANG THEORY -->
     <header class="hero">
       <div class="hero-inner">
-
+    
         <!-- Barre de nav -->
         <div class="hero-nav">
           <div class="hero-logo">
@@ -33,7 +33,6 @@
             <span class="hero-logo-sub">4A</span>
           </div>
           <nav class="hero-nav-links">
-            <!-- Les ancres doivent correspondre aux {#...} dans storydata.md -->
             <a href="#intro">Pilot</a>
             <a href="#dataset">Scene 1</a>
             <a href="#triads">Scene 2</a>
@@ -41,30 +40,42 @@
             <a href="#conclusion">Finale</a>
           </nav>
         </div>
-
-        <!-- Titre façon logo Big Bang Theory -->
-        <div class="hero-content">
-          <div class="hero-logo-wrap">
-            <!-- Atome au-dessus du titre -->
-            <div class="hero-atom">
-              <span class="hero-atom-core"></span>
+    
+        <!-- Zone principale du hero : gauche = titre, droite = personnages -->
+        <div class="hero-main">
+    
+          <!-- Colonne gauche : ton titre actuel (tu peux garder EXACTEMENT ce que tu avais dedans) -->
+          <div class="hero-content">
+            <div class="hero-logo-wrap">
+              <!-- si tu utilises encore l’atome en CSS, garde ce bloc, sinon tu peux le supprimer -->
+              <div class="hero-atom">
+                <span class="hero-atom-core"></span>
+              </div>
+    
+              <div class="hero-bbt-logo">
+                <span class="hero-bbt-the">the</span>
+                <span class="hero-bbt-big">ENEMY</span>
+                <span class="hero-bbt-bang">OF MY ENEMY</span>
+                <span class="hero-bbt-theory">is my friend theory</span>
+              </div>
             </div>
-        
-            <!-- Logo façon Big Bang -->
-            <div class="hero-bbt-logo">
-              <span class="hero-bbt-the">the</span>
-              <span class="hero-bbt-big">ENEMY</span>
-              <span class="hero-bbt-bang">OF MY ENEMY</span>
-              <span class="hero-bbt-theory">is my friend theory</span>
-            </div>
+    
+            <p class="hero-subtitle">
+              {{ page.hero_subtitle | default: "A sitcom-style journey through alliances and rivalries on Reddit" }}
+            </p>
           </div>
-        
-          <p class="hero-subtitle">
-            {{ page.hero_subtitle | default: "A sitcom-style journey through alliances and rivalries on Reddit" }}
-          </p>
-        </div>
-
+    
+          <!-- Colonne droite : illustration des personnages -->
+          <div class="hero-characters">
+            <img src="{{ '/assets/img/hero-characters.png' | relative_url }}"
+                 alt="Sitcom-style illustration of four data scientists">
+          </div>
+    
+        </div><!-- /.hero-main -->
+    
+      </div>
     </header>
+
 
     <!-- CONTENU PRINCIPAL (PAGE BLANCHE) -->
     <div class="page-shell">
