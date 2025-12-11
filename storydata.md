@@ -10,6 +10,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 > **INT. APARTMENT 4A – NIGHT**  
 > Leonard’s whiteboard is covered in equations and a huge messy graph.
 
+<figure class="scene-figure scene-figure-intro">
+  <img src="{{ '/assets/img/scene-int-4a.png' | relative_url }}"
+       alt="Leonard's whiteboard covered in equations and a huge messy graph, in Apartment 4A at night.">
+</figure>
+
+
 **LEONARD** (network nerd):  
 > “Okay, serious scientific question: if two subreddits bully the same subreddit… are they basically best friends now?”
 
