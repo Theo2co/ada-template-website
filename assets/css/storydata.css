@@ -398,4 +398,34 @@ body {
   }
 }
 
+/* ---------- ILLUSTRATION DE LA SCÈNE INT. 4A ---------- */
+
+.scene-figure {
+  margin: 2.5rem 0 2rem;
+}
+
+.scene-figure img {
+  display: block;
+  max-width: 60%;      /* ajuste 50–70% si tu veux plus petit / grand */
+  height: auto;
+  margin: 0 auto;      /* centrée */
+
+  /* Ombre douce pour rappeler le style du hero */
+  filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.35));
+}
+
+/* Si tu veux pousser le côté "cinéma" et l’avoir plutôt à droite : */
+/*
+.scene-figure-intro {
+  text-align: right;
+}
+
+.scene-figure-intro img {
+  display: inline-block;
+  max-width: 40%;
+  margin: 0 0 0 2rem;   // petit décalage par rapport au texte
+}
+*/
+
+
 /*Test 2*/
